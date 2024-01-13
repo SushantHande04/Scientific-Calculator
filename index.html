@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Calculator</title>
+</head>
+<body>
+<div class = "main" id="m">
+    <div class="mcalc" id="main_calc">
+        <div class="calc" id="io">
+            <div class="calc" id="input_display">
+                <input id="inputdisplay" type="text" maxlength="30" placeholder="input">
+            </div>
+
+            <div class="calc" id="output_display">
+                <input id="outputdisplay" type="text" maxlength="30" placeholder="output">
+            </div>
+        </div>
+
+        <div class="calc" id="special_six">
+        <!--arth,func,num_sys-->  
+            <div class="button" id="Arth" onclick="changeToArth()">ARTH</div>
+            <div class="button" id="Func" onclick="changeToFunc()">FUNC</div>
+            <div class="button" id="Num_sys" onclick="changeToNumsys()">NumSys</div>
+            <div class="button" onclick="allClear()" id="AC">AC</div>
+            <div class="button" id="Del" onclick="inputdisplay.value = inputdisplay.value.toString().slice(0,-1)">DEL</div>
+            <div class="button" id="Ans" onclick="answer()">ANS</div>
+        </div>
+       
+
+        <div class="calc" id="righttop">
+            <div class="button" id="Calc" onclick="calc()">Calc</div>
+            <div class="button" id="colon" onclick="inputdisplay.value += ':' ">:</div>
+            <div class="button" id="on" onclick="changeTheme()">Theme</div>
+            <div class="button" id="SD" onclick="dectoFrac()">S&hArr;D</div>
+            <div class="button" id="equal" onclick="equal()">=</div>
+            <div class="button" id="off" onclick="off()" >OFF</div>
+        </div>
+
+        <div class="calc" id="arithmetic"><!--dynamic(Default display)-->
+        <!-- +,-,*,(,),/,% -->
+            <div class="button" id="add" onclick="inputdisplay.value += '+' ">+</div>
+            <div class="button" id="lpar" onclick="inputdisplay.value += '&lpar;' ">&lpar;</div>
+            <div class="button" id="rpar" onclick="inputdisplay.value += '&rpar;' ">&rpar;</div>
+            <div class="button" id="minus" onclick="inputdisplay.value += '-' ">-</div>
+            <div class="button" id="multuply" onclick="inputdisplay.value += '*' ">*</div>
+            <div class="button" id="division" onclick="inputdisplay.value += '/' ">/</div>
+            <!--<div class="button" id="modulus" onclick="inputdisplay.value += '%' ">%</div>-->
+        </div>
+
+        <div class="calc" id="function"><!--dynamic-->
+        <!-- sin,cos,tan,x^y,x^2,x!,logx(base 10),e,
+        sqrt(x),rad,deg,pi-->
+            <div class="button" id="sin" onclick="inputdisplay.value += 'sin&lpar;&rpar;'">sin</div>
+            <div class="button" id="cos" onclick="inputdisplay.value += 'cos&lpar;&rpar;'">cos</div>
+            <div class="button" id="tan" onclick="inputdisplay.value += 'tan&lpar;&rpar;'">tan</div>
+            <div class="button" id="x^y" onclick="inputdisplay.value += 'x^3'">x^3</div>
+            <div class="button" id="x^2" onclick="inputdisplay.value += 'x^2'">x^2</div>
+            <div class="button" id="x!" onclick="inputdisplay.value += 'x!'">x!</div>
+            <div class="button" id="logx" onclick="inputdisplay.value += 'logx'">logx</div>
+            <div class="button" id="e" onclick="inputdisplay.value += Math.E" >e</div>
+            <div class="button" id="sqrt" onclick="inputdisplay.value += 'sqrt&lpar;x&rpar;'">sqrt(x)</div>
+            <div class="button" id="rad" onclick="changeToRad()">Rad</div>
+            <div class="button" id="deg" onclick="changetoDeg()">Deg</div>
+            <div class="button" id="pi" onclick="inputdisplay.value += Math.PI;">&pi;</div>
+        </div>
+
+        <div class="calc" id="num_system"><!--dynamic-->
+        <!--dec,bin,oct,hex.from,to,A,B,C,D,E,F-->
+            <div class="button" id="a" onclick="inputdisplay.value+='A'">A</div>
+            <div class="button" id="b" onclick="inputdisplay.value+='B'">B</div>
+            <div class="button" id="c" onclick="inputdisplay.value+='C'">C</div>
+            <div class="button" id="d" onclick="inputdisplay.value+='D'">D</div>
+            <div class="button" id="e" onclick="inputdisplay.value+='E'">E</div>
+            <div class="button" id="f" onclick="inputdisplay.value+='F'">F</div>
+            <div class="button" id="from" onclick="inputdisplay.value+='from'">FROM</div>
+            
+            <div class="button" id="dec" onclick="inputdisplay.value+='Dec&lpar;&rpar;'" >DEC</div>
+            <div class="button" id="bin" onclick="inputdisplay.value+='Bin&lpar;&rpar;'">BIN</div>
+            <div class="button" id="to" onclick="inputdisplay.value+='to'">TO</div>
+            
+            
+            <div class="button" id="oct" onclick="inputdisplay.value+='Oct&lpar;&rpar;'">OCT</div>
+            <div class="button" id="hex" onclick="inputdisplay.value+='Hex&lpar;&rpar;'">HEX</div>
+            
+        </div>
+
+        <div class="calc" id="num_pad"><!--static-->
+        <!-- 0->9, . , x10^x-->
+            <div class="button num" id="seven" onclick="inputdisplay.value += '7' ">7</div>
+            <div class="button num" id="eight" onclick="inputdisplay.value += '8' ">8</div>
+            <div class="button num" id="nine" onclick="inputdisplay.value += '9' ">9</div>
+            <div class="button num" id="four" onclick="inputdisplay.value += '4' ">4</div>
+            <div class="button num" id="five" onclick="inputdisplay.value += '5' ">5</div>
+            <div class="button num" id="six" onclick="inputdisplay.value += '6' ">6</div>
+            <div class="button num" id="one" onclick="inputdisplay.value += '1' ">1</div>
+            <div class="button num" id="two" onclick="inputdisplay.value += '2' ">2</div>
+            <div class="button num" id="three" onclick="inputdisplay.value += '3' ">3</div>
+            <div class="button num" id="zero" onclick="inputdisplay.value += '0' ">0</div>
+            <div class="button num" id="dot" onclick="inputdisplay.value += '.' ">.</div>
+            <div class="button num" id="10power" onclick="inputdisplay.value += '10^x' ">10^x</div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

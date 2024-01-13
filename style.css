@@ -1,0 +1,237 @@
+body{
+    margin: 0;
+    padding: 0;
+    /*background-image: url('purpledesign.webp');*/
+}
+#m{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to top right, #ff00ff 0%, #00ffcc 100%);
+    /*dark mode*//*background: linear-gradient(to top right, #000066 25%, #6600ff 79%);*/
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.button{
+    padding: 8px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: bold;
+    background-color: #82b74b;
+    align-items: center;
+    border: 2px solid black;
+    box-shadow: 2px 2px;
+    border-radius: 10px;    
+}
+
+.button:hover{
+    padding: 10px;
+    margin: 10px;
+    background-color: #6b983b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#Arth{
+    background-color: #b9936c;
+}
+#Func{
+    background-color: #b9936c;
+}
+#Num_sys{
+    background-color: #b9936c;
+}
+#Arth:hover{
+    background-color:  #a08060;
+}
+#Func:hover{
+    background-color: #a08060;
+}
+#Num_sys:hover{
+    background-color: #a08060;
+}
+#AC{
+    background-color: #bdcebe;
+}
+#Del{
+    background-color: #bdcebe;
+}
+#Ans{
+    background-color: #bdcebe;
+}
+#SD{
+    background-color: #bdcebe;
+}
+#SD{
+    background-color: #b7d7e8  ;
+}
+#equal{
+    background-color:#b7d7e8  ;
+}
+#Calc{
+    background-color: #b7d7e8 ;
+}
+#colon{
+    background-color:#b7d7e8 ;
+}
+#AC:hover{
+    background-color: #d5e1df;
+}
+#Del:hover{
+    background-color: #d5e1df;
+}
+#Ans:hover{
+    background-color: #d5e1df;
+}
+#SD:hover{
+    background-color: #87bdd8;
+}
+#equal:hover{
+    background-color: #87bdd8;
+}
+#Calc:hover{
+    background-color: #87bdd8;
+}
+#colon:hover{
+    background-color: #87bdd8;
+}
+#on{
+    background-color: #f7786b;
+}
+#off{
+    background-color: #f7786b;
+}
+#on:hover{
+    background-color: #c94c4c;
+}
+#off:hover{
+    background-color: #c94c4c;
+}
+#main_calc{
+    background-color:#577c34;
+    border: 2px solid black;
+    /*height: 600px;*/
+    width: 600px;
+    border-radius: 8px;
+    display : flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 740px;
+    /*position: absolute;
+    left: 470px;
+    top: 1px;
+    box-shadow: 2px 2px;
+    margin-bottom: 20px;*/
+    /*display : grid;
+    grid-template-rows: 2fr 2fr 4fr;
+    grid-template-columns: 4fr 4fr;*/
+}
+
+#io{
+    /*background-color: black;*/
+    display : grid;
+    grid-template-rows: repeat(2 , 1fr);
+    grid-template-columns: 1fr;   
+}
+
+#inputdisplay{
+    width: 574px;
+    height: 50px;
+    font-size: 24px;
+    margin-left: 11px;
+    margin-top: 8px;
+    border-radius: 8px;
+    background: #3e4444;
+    color: #bdcebe;
+}   
+
+#outputdisplay{
+    width: 574px;
+    height: 50px;
+    font-size: 24px;
+    margin-left: 11px;
+    margin-top: 8px;
+    border-radius: 8px;
+    background:#3e4444;
+    color: #bdcebe;
+}
+
+#special_six{
+	display : grid;
+  	grid-template-rows : repeat(2 , 100px);
+  	grid-template-columns : repeat(3 , 100px);
+}
+
+
+#righttop{
+	display : grid;
+  	grid-template-rows : repeat(2, 100px);
+  	grid-template-columns : repeat(3, 100px);
+}
+
+#function{
+	display : grid;
+  	grid-template-rows : repeat(4 , 100px);
+  	grid-template-columns : repeat(3 , 100px);
+    /*background-color:  #0f3d0f;
+    border-radius: 8px;*/
+    /*position: absolute;
+    top: 326px;*/
+    position: static;
+    top: 326px;
+    /*z-index: ;*/
+    /*right: 300px;*/
+}
+
+#arithmetic{
+    margin-bottom: 100px;
+	display : grid;
+  	grid-template-rows : repeat(3 , 100px);
+  	grid-template-columns : repeat(3 , 100px);
+    /*background-color:  #0f3d0f;
+    border-radius: 8px;*/
+    /*position: static;
+    top:*/
+}
+
+#modulus{
+	grid-column-start: 2;
+  	grid-column-end : 3;
+}
+
+#num_system{
+	display : grid;
+  	grid-template-rows : repeat(4 , 100px);
+  	grid-template-columns : repeat(3 , 100px);
+    /*background-color:  #0f3d0f;
+    border-radius: 8px;*/
+    /*position: absolute;
+    top: 326px;*/
+    position: static;
+    top: 326px;
+}
+#num_pad{
+    display : grid;
+  	grid-template-rows : repeat(4 , 100px);
+  	grid-template-columns : repeat(3 , 100px);
+    /*position: static;
+    top: 326px;*/
+}
+
+/*#arithmetic{
+    display: none;
+}*/
+
+#function{
+    display: none;
+}
+
+#num_system{
+    display: none;
+}
