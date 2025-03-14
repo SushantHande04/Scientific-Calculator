@@ -116,7 +116,9 @@ body{
     bottom: 20px;
 }
 #AC{
-    background-color: #CCFF33;
+    /* background-color: #CCFF33; */
+    background: rgb(204,255,51);
+    background: radial-gradient(circle, rgba(204,255,51,1) 0%, rgba(144,180,36,1) 0%, rgba(204,255,51,1) 70%);
     box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px, 
             #e1ff66 2px 2px 10px 0px inset, 
             #aacc29 -4px -4px 1px 0px inset;
@@ -133,7 +135,9 @@ body{
             #aacc29 -3.2px -3.2px 8px 0px inset;
 }
 #Del{
-    background-color: #CCFF33;
+    /* background-color: #CCFF33; */
+    background: rgb(204,255,51);
+    background: radial-gradient(circle, rgba(204,255,51,1) 0%, rgba(144,180,36,1) 0%, rgba(204,255,51,1) 70%);
     box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px, 
             #e1ff66 2px 2px 10px 0px inset, 
             #aacc29 -4px -4px 1px 0px inset;
@@ -149,7 +153,9 @@ body{
             #aacc29 -3.2px -3.2px 8px 0px inset;
 }
 #Ans{
-    background-color: #CCFF33;
+    /* background-color: #CCFF33; */
+    background: rgb(204,255,51);
+    background: radial-gradient(circle, rgba(204,255,51,1) 0%, rgba(144,180,36,1) 0%, rgba(204,255,51,1) 70%);
     box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px, 
             #e1ff66 2px 2px 10px 0px inset, 
             #aacc29 -4px -4px 1px 0px inset;
@@ -172,7 +178,8 @@ body{
 } */
 
 #SD{
-    background-color: #A7C7E7;
+    background: rgb(127,152,176);
+background: radial-gradient(circle, rgba(127,152,176,1) 0%, rgba(167,199,231,1) 70%);
     box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px, 
             #c0d7f2 2px 2px 10px 0px inset, 
             #86a7c7 -4px -4px 1px 0px inset;
@@ -191,7 +198,8 @@ body{
 }
 
 #equal{
-    background-color: #A7C7E7;
+    background: rgb(127,152,176);
+background: radial-gradient(circle, rgba(127,152,176,1) 0%, rgba(167,199,231,1) 70%);
     box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px, 
             #c0d7f2 2px 2px 10px 0px inset, 
             #86a7c7 -4px -4px 1px 0px inset;
@@ -210,7 +218,8 @@ body{
 }
 
 #Calc{
-    background-color: #A7C7E7;
+    background: rgb(127,152,176);
+background: radial-gradient(circle, rgba(127,152,176,1) 0%, rgba(167,199,231,1) 70%);
     box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px, 
             #c0d7f2 2px 2px 10px 0px inset, 
             #86a7c7 -4px -4px 1px 0px inset;
@@ -229,7 +238,8 @@ body{
 }
 
 #colon{
-    background-color: #A7C7E7;
+    background: rgb(127,152,176);
+background: radial-gradient(circle, rgba(127,152,176,1) 0%, rgba(167,199,231,1) 70%);
     box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px, 
             #c0d7f2 2px 2px 10px 0px inset, 
             #86a7c7 -4px -4px 1px 0px inset;
