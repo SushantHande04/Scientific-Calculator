@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <script src="script.js"></script>
     <title>Calculator</title>
 </head>
@@ -22,86 +24,189 @@
 
         <div class="calc" id="special_six">
         <!--arth,func,num_sys-->  
-            <div class="button" id="Arth" onclick="changeToArth()">ARTH</div>
-            <div class="button" id="Func" onclick="changeToFunc()">FUNC</div>
-            <div class="button" id="Num_sys" onclick="changeToNumsys()">NumSys</div>
-            <div class="button" onclick="allClear()" id="AC">AC</div>
-            <div class="button" id="Del" onclick="inputdisplay.value = inputdisplay.value.toString().slice(0,-1)">DEL</div>
-            <div class="button" id="Ans" onclick="answer()">ANS</div>
+            <div class="btn">
+                <div class="button" id="Arth" onclick="changeToArth()"><i class="fa-solid fa-a"></i><i class="fa-solid fa-r"></i><i class="fa-solid fa-t"></i><i class="fa-solid fa-h"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="Func" onclick="changeToFunc()"><i class="fa-solid fa-f"></i><i class="fa-solid fa-u"></i><i class="fa-solid fa-n"></i><i class="fa-solid fa-c"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="Num_sys" onclick="changeToNumsys()">
+                    <p class="numsys1"><i class="fa-solid fa-n"></i><i class="fa-solid fa-u"></i><i class="fa-solid fa-m"></i></p>
+                    <P class="numsys2"><i class="fa-solid fa-s"></i><i class="fa-solid fa-y"></i><i class="fa-solid fa-s"></i></P>
+                </div>
+            </div>
+            <div class="btn">
+                <div class="button" onclick="allClear()" id="AC"><i class="fa-solid fa-a"></i><i class="fa-solid fa-c"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="Del" onclick="inputdisplay.value = inputdisplay.value.toString().slice(0,-1)"><i class="fa-solid fa-d"></i><i class="fa-solid fa-e"></i><i class="fa-solid fa-l"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="Ans" onclick="answer()"><i class="fa-solid fa-a"></i><i class="fa-solid fa-n"></i><i class="fa-solid fa-s"></i></div>
+            </div>
         </div>
-       
 
         <div class="calc" id="righttop">
-            <div class="button" id="Calc" onclick="calc()">Calc</div>
-            <div class="button" id="colon" onclick="inputdisplay.value += ':' ">:</div>
-            <div class="button" id="on" onclick="changeTheme()">Theme</div>
-            <div class="button" id="SD" onclick="dectoFrac()">S&hArr;D</div>
-            <div class="button" id="equal" onclick="equal()">=</div>
-            <div class="button" id="off" onclick="off()" >OFF</div>
+            <div class="btn">
+                <div class="button" id="Calc" onclick="calc()"><i class="fa-solid fa-c"></i><i class="fa-solid fa-a"></i><i class="fa-solid fa-l"></i><i class="fa-solid fa-c"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="colon" onclick="inputdisplay.value += ':' "><p>:</p></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="on" onclick="changeTheme()"><i class="fa-solid fa-circle-half-stroke"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="SD" onclick="dectoFrac()"><i class="fa-solid fa-s"></i><i class="fa-solid fa-left-right"></i><i class="fa-solid fa-d"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="equal" onclick="equal()"><i class="fa-solid fa-equals"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="off" onclick="off()" ><i class="fa-solid fa-power-off"></i></div>
+            </div>
         </div>
 
         <div class="calc" id="arithmetic"><!--dynamic(Default display)-->
         <!-- +,-,*,(,),/,% -->
-            <div class="button" id="add" onclick="inputdisplay.value += '+' ">+</div>
-            <div class="button" id="lpar" onclick="inputdisplay.value += '&lpar;' ">&lpar;</div>
-            <div class="button" id="rpar" onclick="inputdisplay.value += '&rpar;' ">&rpar;</div>
-            <div class="button" id="minus" onclick="inputdisplay.value += '-' ">-</div>
-            <div class="button" id="multuply" onclick="inputdisplay.value += '*' ">*</div>
-            <div class="button" id="division" onclick="inputdisplay.value += '/' ">/</div>
+            <div class="btn">
+                <div class="button" id="add" onclick="inputdisplay.value += '+' "><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="lpar" onclick="inputdisplay.value += '&lpar;' "><i class="fi fi-br-bracket-round"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="rpar" onclick="inputdisplay.value += '&rpar;' "><i class="fi fi-br-bracket-round-right"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="minus" onclick="inputdisplay.value += '-' "><i class="fa-solid fa-minus"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="multuply" onclick="inputdisplay.value += '*' "><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="division" onclick="inputdisplay.value += '/' "><i class="fa-solid fa-divide"></i></div>
+            </div>
             <!--<div class="button" id="modulus" onclick="inputdisplay.value += '%' ">%</div>-->
         </div>
 
         <div class="calc" id="function"><!--dynamic-->
         <!-- sin,cos,tan,x^y,x^2,x!,logx(base 10),e,
         sqrt(x),rad,deg,pi-->
-            <div class="button" id="sin" onclick="inputdisplay.value += 'sin&lpar;&rpar;'">sin</div>
-            <div class="button" id="cos" onclick="inputdisplay.value += 'cos&lpar;&rpar;'">cos</div>
-            <div class="button" id="tan" onclick="inputdisplay.value += 'tan&lpar;&rpar;'">tan</div>
-            <div class="button" id="x^y" onclick="inputdisplay.value += 'x^3'">x^3</div>
-            <div class="button" id="x^2" onclick="inputdisplay.value += 'x^2'">x^2</div>
-            <div class="button" id="x!" onclick="inputdisplay.value += 'x!'">x!</div>
-            <div class="button" id="logx" onclick="inputdisplay.value += 'logx'">logx</div>
-            <div class="button" id="e" onclick="inputdisplay.value += Math.E" >e</div>
-            <div class="button" id="sqrt" onclick="inputdisplay.value += 'sqrt&lpar;x&rpar;'">sqrt(x)</div>
-            <div class="button" id="rad" onclick="changeToRad()">Rad</div>
-            <div class="button" id="deg" onclick="changetoDeg()">Deg</div>
-            <div class="button" id="pi" onclick="inputdisplay.value += Math.PI;">&pi;</div>
+            <div class="btn">
+                <div class="button" id="sin" onclick="inputdisplay.value += 'sin&lpar;&rpar;'">sin</div>
+            </div>
+            <div class="btn">
+                <div class="button" id="cos" onclick="inputdisplay.value += 'cos&lpar;&rpar;'">cos</div>
+            </div>
+            <div class="btn">
+                <div class="button" id="tan" onclick="inputdisplay.value += 'tan&lpar;&rpar;'">tan</div>
+            </div>
+            <div class="btn">
+                <div class="button" id="x^y" onclick="inputdisplay.value += 'x^3'">x^3</div>
+            </div>
+            <div class="btn">
+                <div class="button" id="x^2" onclick="inputdisplay.value += 'x^2'">x^2</div>
+            </div>
+            <div class="btn">
+                <div class="button" id="x!" onclick="inputdisplay.value += 'x!'">x!</div>
+            </div>
+            <div class="btn">
+                <div class="button" id="logx" onclick="inputdisplay.value += 'logx'">logx</div>
+            </div>
+            <div class="btn">
+                <div class="button" id="e" onclick="inputdisplay.value += Math.E" >e</div>
+            </div>
+            <div class="btn">
+                <div class="button" id="sqrt" onclick="inputdisplay.value += 'sqrt&lpar;x&rpar;'"><i class="fa-solid fa-square-root-variable"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="rad" onclick="changeToRad()">Rad</div>
+            </div>
+            <div class="btn">
+                <div class="button" id="deg" onclick="changetoDeg()">Deg</div>
+            </div>
+            <div class="btn">
+                <div class="button" id="pi" onclick="inputdisplay.value += Math.PI;">&pi;</div>
+            </div>
         </div>
 
         <div class="calc" id="num_system"><!--dynamic-->
         <!--dec,bin,oct,hex.from,to,A,B,C,D,E,F-->
-            <div class="button" id="a" onclick="inputdisplay.value+='A'">A</div>
-            <div class="button" id="b" onclick="inputdisplay.value+='B'">B</div>
-            <div class="button" id="c" onclick="inputdisplay.value+='C'">C</div>
-            <div class="button" id="d" onclick="inputdisplay.value+='D'">D</div>
-            <div class="button" id="e" onclick="inputdisplay.value+='E'">E</div>
-            <div class="button" id="f" onclick="inputdisplay.value+='F'">F</div>
-            <div class="button" id="from" onclick="inputdisplay.value+='from'">FROM</div>
-            
-            <div class="button" id="dec" onclick="inputdisplay.value+='Dec&lpar;&rpar;'" >DEC</div>
-            <div class="button" id="bin" onclick="inputdisplay.value+='Bin&lpar;&rpar;'">BIN</div>
-            <div class="button" id="to" onclick="inputdisplay.value+='to'">TO</div>
-            
-            
-            <div class="button" id="oct" onclick="inputdisplay.value+='Oct&lpar;&rpar;'">OCT</div>
-            <div class="button" id="hex" onclick="inputdisplay.value+='Hex&lpar;&rpar;'">HEX</div>
-            
+            <div class="btn">
+                <div class="button" id="a" onclick="inputdisplay.value+='A'"><i class="fa-solid fa-a"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="c" onclick="inputdisplay.value+='C'"><i class="fa-solid fa-c"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="d" onclick="inputdisplay.value+='D'"><i class="fa-solid fa-d"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="e" onclick="inputdisplay.value+='E'"><i class="fa-solid fa-e"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="f" onclick="inputdisplay.value+='F'"><i class="fa-solid fa-f"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="from" onclick="inputdisplay.value+='from'"><i class="fa-solid fa-f"></i><i class="fa-solid fa-r"></i><i class="fa-solid fa-o"></i><i class="fa-solid fa-m"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="dec" onclick="inputdisplay.value+='Dec&lpar;&rpar;'" ><i class="fa-solid fa-d"></i><i class="fa-solid fa-e"></i><i class="fa-solid fa-c"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="to" onclick="inputdisplay.value+='to'"><i class="fa-solid fa-t"></i><i class="fa-solid fa-o"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="bin" onclick="inputdisplay.value+='Bin&lpar;&rpar;'"><i class="fa-solid fa-b"></i><i class="fa-solid fa-i"></i><i class="fa-solid fa-n"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="oct" onclick="inputdisplay.value+='Oct&lpar;&rpar;'"><i class="fa-solid fa-o"></i><i class="fa-solid fa-c"></i><i class="fa-solid fa-t"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button" id="hex" onclick="inputdisplay.value+='Hex&lpar;&rpar;'"><i class="fa-solid fa-h"></i><i class="fa-solid fa-e"></i><i class="fa-solid fa-x"></i></div>
+            </div>
         </div>
 
         <div class="calc" id="num_pad"><!--static-->
         <!-- 0->9, . , x10^x-->
-            <div class="button num" id="seven" onclick="inputdisplay.value += '7' ">7</div>
-            <div class="button num" id="eight" onclick="inputdisplay.value += '8' ">8</div>
-            <div class="button num" id="nine" onclick="inputdisplay.value += '9' ">9</div>
-            <div class="button num" id="four" onclick="inputdisplay.value += '4' ">4</div>
-            <div class="button num" id="five" onclick="inputdisplay.value += '5' ">5</div>
-            <div class="button num" id="six" onclick="inputdisplay.value += '6' ">6</div>
-            <div class="button num" id="one" onclick="inputdisplay.value += '1' ">1</div>
-            <div class="button num" id="two" onclick="inputdisplay.value += '2' ">2</div>
-            <div class="button num" id="three" onclick="inputdisplay.value += '3' ">3</div>
-            <div class="button num" id="zero" onclick="inputdisplay.value += '0' ">0</div>
-            <div class="button num" id="dot" onclick="inputdisplay.value += '.' ">.</div>
-            <div class="button num" id="10power" onclick="inputdisplay.value += '10^x' ">10^x</div>
+            <div class="btn">
+                <div class="button num" id="seven" onclick="inputdisplay.value += '7' "><i class="fa-solid fa-7"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button num" id="eight" onclick="inputdisplay.value += '8' "><i class="fa-solid fa-8"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button num" id="nine" onclick="inputdisplay.value += '9' "><i class="fa-solid fa-9"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button num" id="four" onclick="inputdisplay.value += '4' "><i class="fa-solid fa-4"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button num" id="five" onclick="inputdisplay.value += '5' "><i class="fa-solid fa-5"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button num" id="six" onclick="inputdisplay.value += '6' "><i class="fa-solid fa-6"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button num" id="one" onclick="inputdisplay.value += '1' "><i class="fa-solid fa-1"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button num" id="two" onclick="inputdisplay.value += '2' "><i class="fa-solid fa-2"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button num" id="three" onclick="inputdisplay.value += '3' "><i class="fa-solid fa-3"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button num" id="zero" onclick="inputdisplay.value += '0' "><i class="fa-solid fa-0"></i></div>
+            </div>
+            <div class="btn">
+                <div class="button num" id="dot" onclick="inputdisplay.value += '.' ">.</div>
+            </div>
+            <div class="btn">
+                <div class="button num" id="10power" onclick="inputdisplay.value += '10^x' ">10^x</div>
+            </div>
         </div>
 
     </div>
